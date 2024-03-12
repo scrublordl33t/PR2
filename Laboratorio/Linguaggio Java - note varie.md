@@ -2364,3 +2364,172 @@ Il metodo *ofPattern()* accetta valori di qualsiasi tipo, consentendo di mostrar
 
 
 ## ArrayList
+
+La classe *ArrayList* corrisponde ad un array ridimensionabile e si trova nel package *java.util*. La differenza tra un array normale ed un'arraylist sta nel fatto che la dimensione del primo non può essere modificata, mentre nel secondo si possono inserire e rimuovere elementi a piacimento in quanto la sua dimensione viene modificata dinamicamente. La loro sintassi ed i metodi applicabili sono inoltre differenti:
+
+```java
+import java.util.ArrayList; // import the ArrayList class
+
+ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
+```
+In questo esempio abbiamo appena creato un oggetto ArrayList di stringhe di nome cars.
+
+### Aggiunta di elementi
+
+La classe ArrayList possiede diversi metodi utili, ad esempio per l'aggiunta di nuovi elementi si utilizza il metodo *add()*.
+Ad esempio:
+```java
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars);
+  }
+}
+```
+Nell'esempio sopra abbiamo aggiunto all'ArrayList cars alcuni elementi.
+
+### Accesso agli elementi
+
+Per accedere agli elementi di una ArrayList si utilizza il metodo *get()* in combinazione con l'indice posizionale dell'elemento a cui vogliamo accedere:
+```java
+cars.get(0);
+```
+**ATTENZIONE**: è opportuno ricordare che gli elementi di un array iniziano dall'elemento 0, \[0] è pertanto il primo elemento, \[1] il secondo e così via.
+
+### Modificare un elemento
+
+Per modificare un elemento si utilizza il metodo *set()* in combinazione con l'indice posizionale dell'elemento che si vuole modificare:
+```java
+cars.set(0, "Opel");
+```
+
+### Rimozione di un elemento
+
+Per la rimozione di un elemento si utilizza il metodo *remove()* in combinazione con l'indice posizionale dell'elemento che si vuole rimuovere:
+```java
+cars.remove(0);
+```
+
+È inoltre possibile rimuovere tutti gli elementi di un ArrayList tramite il metodo *clear()*:
+```java
+cars.clear();
+```
+ 
+### Dimensione di un'ArrayList
+
+Per sapere quanti elementi sono all'interno di un'ArrayList è possibile utilizzare il metodo *size()*:
+```java
+cars.size();
+```
+
+### Ciclare gli elementi di un'ArrayList
+
+È possibile ciclare attraverso gli elementi di un'ArrayList tramite un ciclo for in combinazione con il metodo size() in modo da specificare quante volte è necessario eseguire il ciclo:
+```java
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    for (int i = 0; i < cars.size(); i++) {
+      System.out.println(cars.get(i));
+    }
+  }
+}
+```
+
+In alternativa è possibile utilizzare un ciclo for-each:
+```java
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    for (String i : cars) {
+      System.out.println(i);
+    }
+  }
+}
+```
+
+### Altri tipi
+
+Gli elementi all'interno di un'ArrayList sono degli oggetti. Negli esempi trattati sopra sono stati creati elementi di tipo stringa, ma come detto più volte in Java il tipo stringa non è primitivo, ma è un oggetto.
+Per utilizzare altri tipi, è necessario specificare l'equivalente "wrapper class", ad esempio *Integer* per i tipi interi, *Boolean* per i tipi booleani e così via.
+Un esempio, col tipo int/Integer può essere il seguente:
+```java
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+    myNumbers.add(10);
+    myNumbers.add(15);
+    myNumbers.add(20);
+    myNumbers.add(25);
+    for (int i : myNumbers) {
+      System.out.println(i);
+    }
+  }
+}
+```
+
+### Ordinamento di un'ArrayList
+
+Un altra classe parecchio utile inclusa nel package java.util è *Collections* la quale include il metodo *sort()* che consente di ordinare alfabeticamente o numericamente una lista.
+Ad esempio, se volessimo ordinare un'ArrayList di stringhe:
+```java
+import java.util.ArrayList;
+import java.util.Collections;  // Import the Collections class
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    Collections.sort(cars);  // Sort cars
+    for (String i : cars) {
+      System.out.println(i);
+    }
+  }
+}
+```
+
+O un'ArrayList di interi:
+```java
+import java.util.ArrayList;
+import java.util.Collections;  // Import the Collections class
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+    myNumbers.add(33);
+    myNumbers.add(15);
+    myNumbers.add(20);
+    myNumbers.add(34);
+    myNumbers.add(8);
+    myNumbers.add(12);
+
+    Collections.sort(myNumbers);  // Sort myNumbers
+
+    for (int i : myNumbers) {
+      System.out.println(i);
+    }
+  }
+}
+
+```
+
+## Liste concatenate (LinkedList)
