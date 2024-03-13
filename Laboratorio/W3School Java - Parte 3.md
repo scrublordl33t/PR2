@@ -14,7 +14,7 @@ La programmazione ad oggetti porta con sé alcuni vantaggi rispetto alla program
 
 Riguardo al principio **DRY**: la sua utilità è quella di ridurre le ripetizioni del codice, inserendolo in un singolo posto che ne consente il riutilizzo senza la ripetizione.
 
-### Classi ed Oggetti
+## Classi ed Oggetti
 
 Classi ed Oggetti sono i due principali aspetti della programmazione ad oggetti. Un semplice esempio di ciascuno può essere:
 - **Classe**
