@@ -5,7 +5,7 @@ Il contenuto di questo file riprende i tutorial di [W3School](https://www.w3scho
 ## I metodi nel linguaggio Java
 Un metodo è un blocco di codice che viene eseguito solo quando viene richiamato. È possibile passare dei dati (detti *parametri*) ad un metodo. I metodi vengono utilizzati per effettuare certe azioni, note anche come **funzioni**. L'utilità dell'utilizzare i metodi è quella di poter riutilizzare parti di codice già definito altrove.
 
-## Creazione di un metodo
+### Creazione di un metodo
 
 Un metodo deve essere dichiarato all'interno di una classe. Viene definito dal suo nome, seguito da delle parentesi tonde ( ). Java fornisce svariati metodi predefiniti, come ad esempio *System.out.println()*, ma è possibile crearne di nuovi. Un esempio di metodo all'interno della classe *Main* può essere il seguente:
 ```java
@@ -20,7 +20,7 @@ Nell'esempio sopra:
 - **static** indica che il metodo appartiene alla classe Main e non ad un oggetto della classe Main
 - **void** indica che il metodo non ha un valore di ritorno
 
-## Chiamata di un metodo
+### Chiamata di un metodo
 
 Per richiamare un metodo in Java è necessario scrivere il suo nome, seguito da parentesi tonde ( ) e il punto e virgola ( ; ). Nell'esempio seguente il metodo *myMethod()* viene utilizzato per stampare del testo quando viene richiamato:
 ```java
@@ -56,7 +56,7 @@ public class Main {
 // I just got executed!
 ```
 
-## Parametri di un metodo
+### Parametri di un metodo
 
 È possibile passare delle informazioni ad un metodo come parametri.  
 I parametri si comportano come variabili all'interno del metodo.  
@@ -103,7 +103,7 @@ public class Main {
 ```
 **ATTENZIONE**: quando si lavora con più parametri, la chiamata del metodo deve avere lo stesso numero di argomenti rispetto ai parametri e gli argomenti devono inoltre essere passati nello stesso ordine.
 
-## Valori di ritorno
+### Valori di ritorno
 
 La keyword *void* usata negli esempi sopra, indica che il metodo non restituisce dei valori. Se si vuole che li restituisca, si possono utilizzare i tipi di dato primitivi (es: *int, char,* ecc...) al posto di *void*, ed inserire la keyword *return* all'interno del metodo:
 ```java
@@ -148,7 +148,7 @@ public class Main {
 // Outputs 8 (5 + 3)
 ```
 
-## Metodi con if...else
+### Metodi con if...else
 
 È pratica comune utilizzare i costrutti if...else all'interno dei metodi
 ```java
@@ -176,7 +176,7 @@ public class Main {
 // Outputs "Access granted - You are old enough!"
 ```
 
-## "Sovraccarico" dei metodi (method overloading)
+### "Sovraccarico" dei metodi (method overloading)
 
 Tramite il method overloading, più metodi possono avere lo stesso nome ma con parametri diversi, ad esempio:
 ```java
@@ -222,7 +222,7 @@ public static void main(String[] args) {
 ```
 **ATTENZIONE**: diversi metodi possono avere lo stesso nome fintanto che il numero e/o il tipo di parametri ricevuti sono diversi.
 
-## Scope delle variabili in Java
+### Scope delle variabili in Java
 
 In Java, le variabili sono accessibili solo all'interno della regione in cui sono create. Questo è detto **scope**.
 
@@ -243,7 +243,7 @@ public class Main {
 ```
 
 
-## Scope del blocco
+### Scope del blocco
 
 Con "blocco di codice" ci si riferisce a del codice racchiuso tra due parentesi graffe { }.  
 Tutte le variabili dichiarate all'interno del blocco sono accessibili soltanto al codice contenuto all'interno delle parentesi, purché il codice sia sotto alla porzione dove le variabili sono state inizializzate:
@@ -272,7 +272,7 @@ public class Main {
 **ATTENZIONE**: un blocco di codice potrebbe esistere per conto suo o appartenere ad una condizione *if*, o a dei cicli *while* o *for*. Nel caso dei cicli *for*, le variabili dichiarate all'interno della condizione sono disponibili anche nel blocco di codice al suo interno.
 
 
-# Ricorsione in Java
+## Ricorsione in Java
 
 La ricorsione è una tecnica che consente ad una funzione di richiamare sé stessa. Questa tecnica offre la possibilità di semplificare dei problemi complicati, scomponendoli in sotto-problemi più piccoli e facili da risolvere.
 
@@ -300,7 +300,7 @@ Nell'esempio sopra, quando chiamiamo la funzione *sum()*, essa somma un parametr
 *10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0*  
 Poiché la funzione non richiama sé stessa quando *k* è pari a 0, il programma termina l'esecuzione e restituisce il risultato finale.
 
-## Condizioni di stop
+### Condizioni di stop
 
 Così come nei cicli si possono avere casi dove si cicla all'infinito, nella ricorsione si ha lo stesso potenziale problema di ricorsione infinita, ossia la funzione potrebbe non smettere mai di richiamare sé stessa. Per questo motivo è buona pratica imporre una condizione di stop affinché la funzione smetta di richiamare sé stessa. (nell'esempio sopra il parametro di stop era il check k == 0)  
 Un altro esempio potrebbe essere il seguente, dove vengono sommati dei numeri in un range compreso tra due variabili: *end* e *start* che vengono utilizzate per imporre la condizione di halt.
