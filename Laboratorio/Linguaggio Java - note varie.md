@@ -1,4 +1,4 @@
-# Tutorial Java 0 - Introduzione a Java
+# OUTDATED - fare riferimento ai file nuovi
 
 ## Primi passi - Hello World
 
