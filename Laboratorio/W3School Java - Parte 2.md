@@ -56,7 +56,7 @@ public class Main {
 // I just got executed!
 ```
 
-### Parametri di un metodo
+## Parametri di un metodo
 
 È possibile passare delle informazioni ad un metodo come parametri.  
 I parametri si comportano come variabili all'interno del metodo.  
@@ -176,7 +176,7 @@ public class Main {
 // Outputs "Access granted - You are old enough!"
 ```
 
-### "Sovraccarico" dei metodi (method overloading)
+## "Sovraccarico" dei metodi (method overloading)
 
 Tramite il method overloading, più metodi possono avere lo stesso nome ma con parametri diversi, ad esempio:
 ```java
@@ -222,7 +222,7 @@ public static void main(String[] args) {
 ```
 **ATTENZIONE**: diversi metodi possono avere lo stesso nome fintanto che il numero e/o il tipo di parametri ricevuti sono diversi.
 
-### Scope delle variabili in Java
+## Scope delle variabili in Java
 
 In Java, le variabili sono accessibili solo all'interno della regione in cui sono create. Questo è detto **scope**.
 
