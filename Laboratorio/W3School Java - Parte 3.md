@@ -1,5 +1,7 @@
 # Tutorial Java - Classi
 
+Il contenuto di questo file riprende i tutorial di [W3School](https://www.w3schools.com/java/default.asp) per il linguaggio Java, a cui sono state integrate nozioni dal libro di testo e dalle slides fornite a lezione.
+
 ## Programmazione ad Oggetti (OOP)
 
 **OOP** sta per **Object-Oriented Programming** (programmazione orientata agli oggetti).  

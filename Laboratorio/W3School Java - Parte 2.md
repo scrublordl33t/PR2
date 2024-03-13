@@ -1,5 +1,8 @@
-# Tutorial Java - Metodi in Java
+# Tutorial Java - Metodi
 
+Il contenuto di questo file riprende i tutorial di [W3School](https://www.w3schools.com/java/default.asp) per il linguaggio Java, a cui sono state integrate nozioni dal libro di testo e dalle slides fornite a lezione.
+
+## I metodi nel linguaggio Java
 Un metodo è un blocco di codice che viene eseguito solo quando viene richiamato. È possibile passare dei dati (detti *parametri*) ad un metodo. I metodi vengono utilizzati per effettuare certe azioni, note anche come **funzioni**. L'utilità dell'utilizzare i metodi è quella di poter riutilizzare parti di codice già definito altrove.
 
 ## Creazione di un metodo

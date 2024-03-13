@@ -1,5 +1,7 @@
 # Tutorial Java - Introduzione a Java
 
+Il contenuto di questo file riprende i tutorial di [W3School](https://www.w3schools.com/java/default.asp) per il linguaggio Java, a cui sono state integrate nozioni dal libro di testo e dalle slides fornite a lezione.
+
 ## Primi passi - Hello World
 
 Nel linguaggio Java, ciascuna applicazione inizia con un nome di una classe il quale deve essere lo stesso del file associato.
