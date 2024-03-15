@@ -14,6 +14,7 @@ class Autonoleggio{
             System.out.println(listaAuto.get(i).getModello());
             System.out.println(listaAuto.get(i).getMarca());
             System.out.println(listaAuto.get(i).getCostoAlGiorno());
+            System.out.println(listaAuto.get(i).getKmPercorsi());
             System.out.println("");
         }
     }
@@ -23,10 +24,10 @@ class Autonoleggio{
         Auto auto1, auto2, auto3, auto4;
         Autonoleggio autonoleggio = new Autonoleggio();
 
-        auto1 = new Auto("Punto", "Fiat", 30.50, true);
-        auto2 = new Auto("MX5", "Mazda", 50.69, true);
-        auto3 = new Auto("Mito", "Alfa", 42.69, false);
-        auto4 = new Auto("Panda", "Fiat", 15.30, true);
+        auto1 = new Auto("Punto", "Fiat", 30.50, true, 37000);
+        auto2 = new Auto("MX5", "Mazda", 50.69, true, 94000);
+        auto3 = new Auto("Mito", "Alfa", 42.69, false, 52000);
+        auto4 = new Auto("Panda", "Fiat", 15.30, true, 46000);
 
         autonoleggio.aggiungiAuto(auto1);
         autonoleggio.aggiungiAuto(auto2);

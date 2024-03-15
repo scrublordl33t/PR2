@@ -3,12 +3,14 @@ class Auto{
 	private String marca;
 	private double costoAlGiorno;
 	private boolean disponibilita;
+	private double kmPercorsi;
 	
-	public Auto(String modello, String marca, double costoAlGiorno, boolean disponibilita){
+	public Auto(String modello, String marca, double costoAlGiorno, boolean disponibilita, double kmPercorsi){
 		this.modello = modello;
 		this.marca = marca;
 		this.costoAlGiorno = costoAlGiorno;
 		this.disponibilita = disponibilita;
+		this.kmPercorsi = kmPercorsi;
 	}
 	
 	public String getModello(){
@@ -37,6 +39,13 @@ class Auto{
 	}
 	public void setDisponibilita(boolean newDisponibilita){
 		this.disponibilita = newDisponibilita;
+	}
+
+	public double getKmPercorsi(){
+		return this.kmPercorsi;
+	}
+	public void setKmPercorsi(double newKmPercorsi){
+		this.kmPercorsi = newKmPercorsi;
 	}
 	
 }
