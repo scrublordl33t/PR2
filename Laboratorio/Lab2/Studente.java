@@ -1,50 +1,80 @@
-package Lab2;
+public class Studente extends Persona{
+	private int matricola;
+	private int annoIscrizione;
 
-public class Studente extends Persona {
-    private int matricola;
-    private int annoIscrizione;
+	// Costruttore senza parametri
+	public Studente(){
+		super(); //potrei ometterlo
+		this.matricola = -1;
+	}
 
-    public Studente(){
-        super();
-        this.matricola = -1;
-        this.annoIscrizione = 0;
-    }
+	// Costruttore con parametri
+	public Studente(String nome, String cognome, int eta, int matricola, int annoIscrizione){
+		super(nome, cognome, eta);
+		this.matricola = matricola;
+		this.annoIscrizione = annoIscrizione;
+	}
 
-    public Studente(String nome, String cognome, int eta, int matricola, int annoIscrizione){
-        super(nome, cognome, eta);
-        this.matricola = matricola;
-        this.annoIscrizione = annoIscrizione;
-    }
-
-    public Studente(Studente copiaStudente){
-        super();
-        if(copiaStudente != null){
-            super.setNome(copiaStudente.getNome());
-            super.setCognome(copiaStudente.getCognome());
-            super.setEta(copiaStudente.getEta());
-            this.matricola = copiaStudente.getMatricola();
-        }
-    }
+	// Costruttore copia
+	public Studente(Studente altroStudente){
+		super();
+		if(altroStudente != null){
+			super.setNome(altroStudente.getNome());
+			super.setCognome(altroStudente.getCognome());
+			super.setEta(altroStudente.getEta());
+			this.matricola = altroStudente.getMatricola();
+			this.annoIscrizione = altroStudente.getAnnoIscrizione();
+		}
+	}
 
 
-    public void setMatricola(int newMatricola){
-        this.matricola = newMatricola;
-    }
-    public int getMatricola(){
-        return this.matricola;
-    }
-    
-    public void setAnnoIscrizione(int newAnnoIscrizione){
-        this.annoIscrizione = newAnnoIscrizione;
-    }
-    public int getAnnoIscrizione(){
-        return this.annoIscrizione;
-    }
 
-    @Override
-    public double calcolaCostoBiglietto(double prezzoBiglietto){
-        if(super.getEta() < 30){
-            return prezzoBiglietto = 0.0;
-        }
-    }
+	//metodi getter
+	public int getMatricola(){
+		return this.matricola;
+	}
+
+	public int getAnnoIscrizione(){
+		return this.annoIscrizione;
+	}
+
+
+	//metodi setter
+	public void setMatricola(int nuovaMatricola){
+		this.matricola = nuovaMatricola;
+	}
+
+	public void setAnnoIscrizione(int nuovoAnnoIscrizione){
+		this.annoIscrizione = nuovoAnnoIscrizione;
+	}
+
+
+	@Override
+	public double calcolaCostoBiglietto(double costoBiglietto){
+		double prezzoScontato = 0;
+
+		if(costoBiglietto > 0){
+			if(super.getEta() < 30){
+				prezzoScontato = 0;
+			}else if(2024 - this.annoIscrizione <= 3){
+				prezzoScontato = costoBiglietto - ((costoBiglietto / 100) * 50);
+			}else{
+				prezzoScontato = super.calcolaCostoBiglietto(costoBiglietto);
+			}
+		}
+		return prezzoScontato;
+	}
+
+
+	
+
+	@Override
+	public String toString(){
+		String s = "";
+		s = s + super.toString()
+			+ "Matricola: " + this.getMatricola()
+			+ "annoIscrizione: " + this.getAnnoIscrizione();
+		return s;
+	}
+
 }
