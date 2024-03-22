@@ -1,51 +1,76 @@
-class Auto{
-	private String modello;
-	private String marca;
-	private double costoAlGiorno;
-	private boolean disponibilita;
-	private double kmPercorsi;
-	
-	public Auto(String modello, String marca, double costoAlGiorno, boolean disponibilita, double kmPercorsi){
-		this.modello = modello;
-		this.marca = marca;
-		this.costoAlGiorno = costoAlGiorno;
-		this.disponibilita = disponibilita;
-		this.kmPercorsi = kmPercorsi;
-	}
-	
-	public String getModello(){
-		return this.modello;
-	}
-	public void setModello(String newModello){
-		this.modello = newModello;
-	}
-	
-	public String getMarca(){
-		return this.marca;
-	}	
-	public void setMarca(String newMarca){
-		this.marca = newMarca;
-	}
-	
-	public double getCostoAlGiorno(){
-		return this.costoAlGiorno;
-	}
-	public void setCostoAlGiorno(double newCostoAlGiorno){
-		this.costoAlGiorno = newCostoAlGiorno;
-	}
-	
-	public boolean getDisponibilita(){
-		return this.disponibilita;
-	}
-	public void setDisponibilita(boolean newDisponibilita){
-		this.disponibilita = newDisponibilita;
-	}
+public class Auto{
 
-	public double getKmPercorsi(){
-		return this.kmPercorsi;
-	}
-	public void setKmPercorsi(double newKmPercorsi){
-		this.kmPercorsi = newKmPercorsi;
-	}
-	
+    private String marca;
+    private String modello;
+    private float prezzoAlGiorno;
+    private boolean disponibilita;
+
+    public Auto(String marca, String modello, float prezzoAlGiorno){
+
+        this.marca = marca;
+        this.modello = modello;
+        this.prezzoAlGiorno = prezzoAlGiorno;
+        this.disponibilita = true;
+    }
+
+    public Auto(String marca, String modello, float prezzoAlGiorno,boolean disponibilita){
+
+        this.marca = marca;
+        this.modello = modello;
+        this.prezzoAlGiorno = prezzoAlGiorno;
+        this.disponibilita = disponibilita;
+    }
+
+    public void setMarca(String marca){
+
+        this.marca = marca;
+    }
+
+    public void setModello(String modello){
+
+        this.modello = modello;
+    }
+
+    public void setPrezzoAlGiorno(float prezzoAlGiorno){
+        
+        this.prezzoAlGiorno = prezzoAlGiorno;
+    }
+
+    public void setDisponibilta(boolean disponibilita){
+
+        this.disponibilita = disponibilita;
+    }
+
+    public String getMarca(){
+        
+        return this.marca;
+    }
+
+    public String getModello(){
+
+        return this.modello;
+    }
+
+    public float getPrezzoAlGiorno(){
+
+        return this.prezzoAlGiorno;
+    }
+
+    public boolean getDisponibilita(){
+
+        return this.disponibilita;
+    }
+
+    public String visualizzaDati(){
+
+        String s = "";
+        s += "Marca: "+this.marca+".\nModello: "+this.modello+".\nPrezzo: "+this.prezzoAlGiorno+".\n";
+        return s;
+    }
+
+    public static void main(String[] args){
+
+        Auto a = new Auto("Subaru","Baracca",3);
+        System.out.println(a.visualizzaDati());
+    }
 }
